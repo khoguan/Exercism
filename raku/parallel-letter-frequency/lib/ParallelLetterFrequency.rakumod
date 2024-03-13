@@ -1,6 +1,7 @@
 unit module ParallelLetterFrequency;
 
 # Iteration 1
+
 sub letter-frequencies (+@texts) is export {
     my %counts;
 
