@@ -2,15 +2,26 @@ unit module ParallelLetterFrequency;
 
 # Iteration 1
 # Iteration 2
+# Iteration 3
 
 sub letter-frequencies (+@texts) is export {
-    my %counts;
+    return letter-frequencies-v2(@texts);
 
-    @texts>>.comb(/<alpha>/)>>.fc>>.&count-letters-freq();
-    
-    return %counts;
+    # v1: using Hash to manually count the frequencies
+    sub letter-frequencies-v1(@texts) {
+        my %counts;
 
-    sub count-letters-freq($letter) {
-           %counts{$letter}++;
-    } 
+        @texts>>.comb(/<alpha>/)>>.fc>>.&count-letters-freq();
+        
+        return %counts;
+
+        sub count-letters-freq($letter) {
+               %counts{$letter}++;
+        } 
+    }
+
+    # v1: using Bag to count automatically, then turn the bag into a Hash.
+    sub letter-frequencies-v2(@texts) {
+        return @texts>>.comb(/<alpha>/)>>.fc>>.Slip.Bag.Hash;
+    }
 }

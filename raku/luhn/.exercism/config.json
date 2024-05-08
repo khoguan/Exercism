@@ -1,0 +1,23 @@
+{
+  "authors": [
+    "yanick"
+  ],
+  "contributors": [
+    "kotp",
+    "m-dango"
+  ],
+  "files": {
+    "solution": [
+      "lib/Luhn.rakumod"
+    ],
+    "test": [
+      "t/luhn.rakutest"
+    ],
+    "example": [
+      ".meta/solutions/lib/Luhn.rakumod"
+    ]
+  },
+  "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
+  "source": "The Luhn Algorithm on Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Luhn_algorithm"
+}

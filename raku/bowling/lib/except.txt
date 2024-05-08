@@ -1,0 +1,4 @@
+    X::Bowling::GameInProgress,
+    X::Bowling::GameOver,
+    X::Bowling::NegativePins,
+    X::Bowling::TooManyPins,
